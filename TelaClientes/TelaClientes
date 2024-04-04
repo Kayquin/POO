@@ -1,0 +1,38 @@
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class TelaClientes {
+    private JLabel LblCpf;
+    private JLabel LblNome;
+    private JLabel LblEmail;
+    private JLabel LblTelefone;
+    private JLabel LblEndereco;
+    private JTextField JtfNome;
+    private JTextField JtfCpf;
+    private JTextField JtfEmail;
+    private JTextField JtfTelefone;
+    private JTextField JtfEndereco;
+    private JButton JbSalvar;
+    private JButton JbFechar;
+    private JPanel jpanel1;
+
+    public TelaClientes() {
+    JbFechar.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            System.exit(0);
+        }
+    });
+}
+
+public static void main(String[] args){
+    JFrame t = new JFrame("TelaClientes");
+    t.setContentPane(new TelaClientes().jpanel1);
+    t.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+    t.pack();
+    t.setLocationRelativeTo(null);
+    t.setVisible(true);
+}
+
+}
