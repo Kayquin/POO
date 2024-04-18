@@ -121,3 +121,91 @@ public class Main {
         // Exemplo de uso das outras classes...
     }
 }
+
+
+
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class TelaCliente extends JFrame {
+    private JTextField textFieldNome;
+    private JTextField textFieldCPF;
+    private JTextField textFieldEndereco;
+    private JTextField textFieldTelefone;
+
+    public TelaCliente() {
+        setTitle("Cadastro de Cliente");
+        setSize(300, 200);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null); // Centraliza a janela na tela
+
+        // Painel principal
+        JPanel panel = new JPanel();
+        panel.setLayout(new GridLayout(5, 2));
+
+        // Componentes da tela
+        JLabel labelNome = new JLabel("Nome:");
+        textFieldNome = new JTextField();
+        JLabel labelCPF = new JLabel("CPF:");
+        textFieldCPF = new JTextField();
+        JLabel labelEndereco = new JLabel("Endereço:");
+        textFieldEndereco = new JTextField();
+        JLabel labelTelefone = new JLabel("Telefone:");
+        textFieldTelefone = new JTextField();
+
+        // Botão para salvar cliente
+        JButton buttonSalvar = new JButton("Salvar");
+        buttonSalvar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                salvarCliente();
+            }
+        });
+
+        // Adicionando componentes ao painel
+        panel.add(labelNome);
+        panel.add(textFieldNome);
+        panel.add(labelCPF);
+        panel.add(textFieldCPF);
+        panel.add(labelEndereco);
+        panel.add(textFieldEndereco);
+        panel.add(labelTelefone);
+        panel.add(textFieldTelefone);
+        panel.add(new JLabel()); // Espaçamento
+        panel.add(buttonSalvar);
+
+        // Adicionando painel à janela
+        add(panel);
+
+        setVisible(true);
+    }
+
+    private void salvarCliente() {
+        // Criando um novo cliente com os dados da tela
+        String nome = textFieldNome.getText();
+        String cpf = textFieldCPF.getText();
+        String endereco = textFieldEndereco.getText();
+        String telefone = textFieldTelefone.getText();
+
+        Cliente cliente = new Cliente(nome, endereco, telefone, cpf);
+
+        // Exibindo as informações do cliente
+        JOptionPane.showMessageDialog(this,
+                "Cliente cadastrado:\nNome: " + cliente.getNome() +
+                        "\nCPF: " + cliente.getCpf() +
+                        "\nEndereço: " + cliente.getEndereco() +
+                        "\nTelefone: " + cliente.getTelefone());
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new TelaCliente();
+            }
+        });
+    }
+}
