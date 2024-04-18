@@ -1,0 +1,123 @@
+// Classe pai
+public class Pessoa {
+    private String nome;
+    private String endereco;
+    private String telefone;
+
+    // Construtor
+    public Pessoa(String nome, String endereco, String telefone) {
+        this.nome = nome;
+        this.endereco = endereco;
+        this.telefone = telefone;
+    }
+
+    // Getters e Setters
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+}
+
+// Classe Cliente
+public class Cliente extends Pessoa {
+    private String cpf;
+
+    // Construtor
+    public Cliente(String nome, String endereco, String telefone, String cpf) {
+        super(nome, endereco, telefone);
+        this.cpf = cpf;
+    }
+
+    // Getter e Setter específico de Cliente
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+}
+
+// Classe Colaborador
+public class Colaborador extends Pessoa {
+    private String cargo;
+
+    // Construtor
+    public Colaborador(String nome, String endereco, String telefone, String cargo) {
+        super(nome, endereco, telefone);
+        this.cargo = cargo;
+    }
+
+    // Getter e Setter específico de Colaborador
+    public String getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
+}
+
+// Classe Fornecedor
+public class Fornecedor extends Pessoa {
+    private String cnpj;
+
+    // Construtor
+    public Fornecedor(String nome, String endereco, String telefone, String cnpj) {
+        super(nome, endereco, telefone);
+        this.cnpj = cnpj;
+    }
+
+    // Getter e Setter específico de Fornecedor
+    public String getCnpj() {
+        return cnpj;
+    }
+
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
+    }
+}
+
+// Classe TelaCliente (pode ser usada para interações com clientes no sistema)
+public class TelaCliente {
+    // Métodos para interações com clientes
+    public void exibirInformacoesCliente(Cliente cliente) {
+        System.out.println("Nome: " + cliente.getNome());
+        System.out.println("CPF: " + cliente.getCpf());
+        System.out.println("Endereço: " + cliente.getEndereco());
+        System.out.println("Telefone: " + cliente.getTelefone());
+    }
+
+    // Outros métodos de interação com clientes...
+}
+
+// Classe principal para teste
+public class Main {
+    public static void main(String[] args) {
+        // Exemplo de uso das classes
+        Cliente cliente = new Cliente("Fulano", "Rua A, 123", "123456789", "123.456.789-00");
+        TelaCliente tela = new TelaCliente();
+        tela.exibirInformacoesCliente(cliente);
+
+        // Exemplo de uso das outras classes...
+    }
+}
