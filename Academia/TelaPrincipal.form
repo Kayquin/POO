@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="TelaPrincipal">
+  <grid id="27dc6" binding="TelaPrincipal1" layout-manager="GridLayoutManager" row-count="4" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties>
+      <background color="-1"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <vspacer id="b6aa8">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <grid id="1c9b7" class="javax.swing.JMenuBar" binding="MenuBar" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <grid id="2e6a3" class="javax.swing.JMenu" binding="JmenuMembros" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints/>
+            <properties>
+              <text value="Membros"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="ecf7d" class="javax.swing.JMenuItem" binding="membrositem">
+                <constraints/>
+                <properties>
+                  <text value="Membros"/>
+                </properties>
+              </component>
+              <component id="77da8" class="javax.swing.JMenuItem" binding="AdicionarMembros">
+                <constraints/>
+                <properties>
+                  <hideActionText value="true"/>
+                  <text value="Adicionar Membros"/>
+                </properties>
+              </component>
+              <component id="7ac4f" class="javax.swing.JMenuItem" binding="Funcionarios">
+                <constraints/>
+                <properties>
+                  <text value="Funcionários"/>
+                </properties>
+              </component>
+              <component id="bb59c" class="javax.swing.JMenuItem" binding="AdicionarFuncionarios">
+                <constraints/>
+                <properties>
+                  <text value="Adicionar Funcionários"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="8f361" class="javax.swing.JMenu" binding="MenuAulas" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints/>
+            <properties>
+              <text value="Aulas"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="e104b" class="javax.swing.JMenuItem" binding="AulasDisponiveis">
+                <constraints/>
+                <properties>
+                  <text value="Aulas Disponiveis"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="c1af1" class="javax.swing.JMenu" binding="MenuEquipamentos" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints/>
+            <properties>
+              <text value="Equipamentos"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="4ba3" class="javax.swing.JMenuItem" binding="VerEquipamentos">
+                <constraints/>
+                <properties>
+                  <text value="Ver Equipamentos"/>
+                </properties>
+              </component>
+              <component id="78c4d" class="javax.swing.JMenuItem" binding="AddEquipamentos">
+                <constraints/>
+                <properties>
+                  <text value="Add Equipamentos"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="7893e" class="javax.swing.JMenu" binding="MenuPagamentos" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints/>
+            <properties>
+              <text value="Pagamentos"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="7c68f" class="javax.swing.JMenuItem" binding="VerPagamentos">
+                <constraints/>
+                <properties>
+                  <text value="Ver Pagamentos"/>
+                </properties>
+              </component>
+              <component id="888ed" class="javax.swing.JMenuItem" binding="VerPlanos">
+                <constraints/>
+                <properties>
+                  <text value="Ver Planos"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </grid>
+      <component id="1ed97" class="javax.swing.JButton" binding="fecharButton" default-binding="true">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1761270"/>
+          <enabled value="true"/>
+          <foreground color="-1"/>
+          <text value="Fechar"/>
+        </properties>
+      </component>
+      <component id="654c0" class="javax.swing.JLabel" binding="MenuAcademia">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <foreground color="-16448510"/>
+          <text value="Menu Academia"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
